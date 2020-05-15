@@ -1,7 +1,6 @@
 import os
 import sys
 import time
-
 print ("Current Directory is:", os.getcwd())
 cont = input("Organize Files in current directory (Y)es, (N)o\n")
 path =  os.getcwd()
@@ -18,7 +17,8 @@ if cont in ["Y", "y", "Yes", "yes"]:
                 os.makedirs(artistName)
             if not os.path.exists(artistName +"\\"+albumName):
                 os.makedirs(artistName +"\\"+albumName)
-            os.rename(origName, artistName + "\\" + albumName + "\\" + albumName + trackNumber + songName)
+            newName = albumName +"_"+ trackNumber +"_"+ songName
+            os.rename(origName, artistName + "\\" + albumName + "\\" + newName)
         else:
             print("Skipping: " + origName)
             pass
