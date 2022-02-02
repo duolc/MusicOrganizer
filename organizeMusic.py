@@ -2,7 +2,7 @@ import os
 import sys
 import time
 print ("Current Directory is:", os.getcwd())
-cont = input("Organize Files in current directory (Y)es, (N)o\n")
+cont = input("Organize Flac files in current directory (Y)es, (N)o\n")
 path =  os.getcwd()
 if cont in ["Y", "y", "Yes", "yes"]:
     separator = input("Input separator for Artist/Album/Song \nOnly supports a single type of separator\n")
